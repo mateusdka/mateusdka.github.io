@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil - Pet Pride</title>
+    <!-- Bootstrap CSS Local -->
+    <link href="js/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="js/node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <!-- Estilos Personalizados -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="amarelo">
+    
+    <!-- Header -->
+    <header class="header-logo">
+        <div>
+            <a href="index.html"><img src="img/ppr-logo-hor.svg" alt="Pet Pride Logo" height="50"></a>
+        </div>
+        <div>
+            <a href="perfil-user.html"><i class="material-symbols-outlined active">person</i></a>
+        </div>
+    </header>
+
+    <!-- Seção de Boas-vindas e Título -->
+    <section class="container mt-4">
+        <div class="d-flex align-items-center">
+            <div class="profile-img">
+                <i class="material-symbols-outlined amarelo">person</i>
+            </div>
+            <div class="p-3">
+                <h3>Olá, Mateus Fardin</h3>
+                <p>Editando o seu Cadastro</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulário de Edição -->
+    <section class="container mt-4">
+        <form action="perfil-user.html">
+            <!-- Nome -->
+            <div class="form-group mb-3">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" class="form-control" value="Mateus Fardin">
+            </div>
+
+            <!-- Sexo e Nascimento -->
+            <div class="row mb-3">
+                <div class="col-6">
+                    <label for="sexo">Sexo</label>
+                    <select id="sexo" class="form-select">
+                        <option value="Masculino" selected>Masculino</option>
+                        <option value="Feminino">Feminino</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </div>
+                <div class="col-6">
+                    <label for="nascimento">Nascimento</label>
+                    <input type="text" id="nascimento" class="form-control" value="08/11/1985">
+                </div>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group mb-3">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="form-control" value="mateus.fardin@edu.pucrs.br" disabled>
+                <small class="form-text text-muted">
+                    <a href="#" class="text-warning">Por que não posso editar meu e-mail?</a>
+                </small>
+            </div>
+
+            <!-- Conexões de Contas -->
+            <h5>Login via Contas</h5>
+            <div class="form-group mb-3">
+                <button type="button" class="serv-btn btn-warning w-100">Conectar Contas</button>
+            </div>
+            <div class="form-group mb-3">
+                <button type="button" class="btn btn-light w-100 text-start d-flex justify-content-between align-items-center">
+                    <span><i class="bi bi-google"></i> Login via Conta Google</span>
+                    <span class="text-success">Conectada</span>
+                </button>
+            </div>
+            <div class="form-group mb-3">
+                <button type="button" class="btn btn-light w-100 text-start d-flex justify-content-between align-items-center">
+                    <span><i class="bi bi-facebook"></i> Login via Conta Facebook</span>
+                    <span class="text-danger">Não Conectada</span>
+                </button>
+            </div>
+            <div class="form-group mb-3">
+                <button type="button" class="btn btn-light w-100 text-start d-flex justify-content-between align-items-center">
+                    <span><i class="bi bi-instagram"></i> Login via Conta Instagram</span>
+                    <span class="text-danger">Não Conectada</span>
+                </button>
+            </div>
+
+            <!-- Botões de Ação -->
+            <div class="d-flex justify-content-between mt-4">
+                <button type="button" class="btn btn-light text-danger">Cancelar</button>
+                <button type="submit" class="serv-btn btn-success">Salvar</button>
+            </div>
+        </form>
+    </section>
+
+<!-- Footer -->
+<footer class="bg-light text-center text-lg-start mt-4">
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Sobre Nós</h5>
+                <p>Pet Pride é o seu pet shop online de confiança, oferecendo produtos de qualidade para o cuidado com o seu pet. Cuidamos com carinho!</p>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Contato</h5>
+                <ul class="list-unstyled mb-0">
+                    <li><i class="bi bi-envelope"></i> contato@petpride.com.br</li>
+                    <li><i class="bi bi-telephone"></i> +55 (21) 9999-9999</li>
+                    <li><i class="bi bi-geo-alt"></i> Rua dos Pets, 123 - Rio de Janeiro</li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Siga-nos</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#" class="text-dark me-4"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-dark me-4"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-dark me-4"><i class="bi bi-twitter"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2024 Pet Pride - Todos os direitos reservados.
+    </div>
+</footer>
+
+    <!-- Bootstrap JS Local -->
+    <script src="js/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

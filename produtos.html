@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Pride - Produtos</title>
+    <!-- Bootstrap CSS Local -->
+    <link href="js/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons CSS Local -->
+    <link href="js/node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <!-- Estilos Personalizados -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="verde">
+
+    <!-- Header -->
+    <header class="header-logo">
+        <div>
+            <a href="index.html"><img src="img/ppr-logo-hor.svg" alt="Pet Pride Logo" height="50"></a>
+        </div>
+        <div>
+            <a href="perfil-user.html"><i class="material-symbols-outlined active">person</i></a>
+        </div>
+    </header>
+
+    <!-- Lista Horizontal de Produtos -->
+    <section class="container mt-4">
+        <h3 class="section-title">Filtre os Produtos por Categoria</h3>
+        <div class="scrolling-wrapper" id="productScroll">
+            <div id="secas-btn" class="product-card">
+                <i class="material-symbols-outlined">grain</i>
+                <p>Rações Secas</p>
+            </div>
+            <div id="umidas-btn" class="product-card">
+                <i class="material-symbols-outlined">water_drop</i>
+                <p>Rações Úmidas</p>
+            </div>
+            <div id="petiscos-btn" class="product-card">
+                <i class="material-symbols-outlined">cookie</i>
+                <p>Petiscos</p>
+            </div>
+            <div id="cosmeticos-btn" class="product-card">
+                <i class="material-symbols-outlined">spa</i>
+                <p>Cosméticos</p>
+            </div>
+            <div id="medicamentos-btn" class="product-card">
+                <i class="material-symbols-outlined">pill</i>
+                <p>Medicamentos</p>
+            </div>
+        </div>
+
+        <div class="dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </section>
+
+    <script src="js/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript para o status de rolagem -->
+    <script>
+        const scrollingWrapper = document.getElementById('productScroll');
+        const dots = document.querySelectorAll('.dot');
+        const numCards = dots.length;
+
+        scrollingWrapper.addEventListener('scroll', () => {
+            const maxScrollLeft = scrollingWrapper.scrollWidth - scrollingWrapper.clientWidth;
+            const scrollLeft = scrollingWrapper.scrollLeft;
+            const progress = scrollLeft / maxScrollLeft;
+
+            // Atualiza as bolinhas (dots) com base na rolagem
+            const activeIndex = Math.round(progress * (numCards - 1));
+
+            dots.forEach((dot, index) => {
+                if (index === activeIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        });
+    </script>
+    
+    <!-- JavaScript para a seleção do card -->
+    <script>
+        // Selecionar os cinco botões
+        const secasBtn = document.getElementById('secas-btn');
+        const umidasBtn = document.getElementById('umidas-btn');
+        const petiscosBtn = document.getElementById('petiscos-btn');
+        const cosmeticosBtn = document.getElementById('cosmeticos-btn');
+        const medicamentosBtn = document.getElementById('medicamentos-btn');
+    
+        // Função para ativar o botão clicado e desativar os outros
+        function toggleActive(selectedBtn, otherBtns) {
+            selectedBtn.classList.add('active-prod-card'); // Ativa o botão clicado
+            otherBtns.forEach(btn => btn.classList.remove('active-prod-card')); // Remove o estado dos outros
+        }
+    
+        // Eventos de clique para os botões
+        secasBtn.addEventListener('click', () => {
+            toggleActive(secasBtn, [umidasBtn, petiscosBtn, cosmeticosBtn, medicamentosBtn]);
+        });
+    
+        umidasBtn.addEventListener('click', () => {
+            toggleActive(umidasBtn, [secasBtn, petiscosBtn, cosmeticosBtn, medicamentosBtn]);
+        });
+    
+        petiscosBtn.addEventListener('click', () => {
+            toggleActive(petiscosBtn, [secasBtn, umidasBtn, cosmeticosBtn, medicamentosBtn]);
+        });
+    
+        cosmeticosBtn.addEventListener('click', () => {
+            toggleActive(cosmeticosBtn, [secasBtn, umidasBtn, petiscosBtn, medicamentosBtn]);
+        });
+    
+        medicamentosBtn.addEventListener('click', () => {
+            toggleActive(medicamentosBtn, [secasBtn, umidasBtn, petiscosBtn, cosmeticosBtn]);
+        });
+    </script>
+    
+
+    <!-- Barra de busca -->
+    <section class="search-bar">
+        <input type="text" placeholder="BUSCAR...">
+        <button><i class="bi bi-search"></i></button>
+    </section>
+
+    <!-- Lista de produtos -->
+    <section class="container mt-4">
+        <div class="row">
+            <!-- Produto 1 -->
+            <div class="col-6 col-md-3 mb-4">
+                <div class="card">
+                    <img src="img/prod/racao-caes-nutrive-select-adultos-pequeno-porte-frango-e-arroz.png" class="card-img-top" alt="Nutrive Select Adultos Pequeno Porte">
+                    <div class="card-body">
+                        <h5 class="card-title">Nutrive Select Adultos Pequeno Porte</h5>
+                        <p class="card-text">Frango e Arroz - 15kg</p>
+                        <p class="price">A partir de R$ 199,90</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Produto 2 -->
+            <div class="col-6 col-md-3 mb-4">
+                <div class="card">
+                    <img src="img/prod/Racao-Formula-Natural-Super-Premium-Gatos-Castrados-Senior-Frango.webp" class="card-img-top" alt="Fórmula Natural Gatos Sênior">
+                    <div class="card-body">
+                        <h5 class="card-title">Fórmula Natural Gatos Sênior</h5>
+                        <p class="card-text">Frango - 1,5kg</p>
+                        <p class="price">A partir de R$ 114,90</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Produto 3 -->
+            <div class="col-6 col-md-3 mb-4">
+                <div class="card">
+                    <img src="img/prod/Racao-Gran-Plus-Choice-Gatos-Filhotes-Frango-e-Carne.webp" class="card-img-top" alt="Gran Plus Choice Gatos Filhotes">
+                    <div class="card-body">
+                        <h5 class="card-title">Gran Plus Choice Gatos Filhotes</h5>
+                        <p class="card-text">Frango e Carne - 10kg</p>
+                        <p class="price">A partir de R$ 124,90</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Produto 4 -->
+            <div class="col-6 col-md-3 mb-4">
+                <div class="card">
+                    <img src="img/prod/Racao-Magnus-Premium-Caes-Todo-Dia-Adulto-Carne-Frango.webp" class="card-img-top" alt="Magnus Premium Adultos">
+                    <div class="card-body">
+                        <h5 class="card-title">Magnus Premium Adultos</h5>
+                        <p class="card-text">Carne e Frango - 15kg</p>
+                        <p class="price">A partir de R$ 89,90</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Produto 5 -->
+            <div class="col-6 col-md-3 mb-4">
+                <div class="card">
+                    <img src="img/prod/Racao-Magnus-Premium-Caes-Todo-Dia-Filhotes-Carne.webp" class="card-img-top" alt="Magnus Premium Filhotes">
+                    <div class="card-body">
+                        <h5 class="card-title">Magnus Premium Filhotes</h5>
+                        <p class="card-text">Carne - 10kg</p>
+                        <p class="price">A partir de R$ 99,90</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Produto 6 -->
+            <div class="col-6 col-md-3 mb-4">
+                <div class="card">
+                    <img src="img/prod/Racao-Origens-Gatos-Adultos-Castrados-Carne-.webp" class="card-img-top" alt="Origens Gatos Castrados">
+                    <div class="card-body">
+                        <h5 class="card-title">Origens Gatos Castrados</h5>
+                        <p class="card-text">Carne - 10kg</p>
+                        <p class="price">A partir de R$ 109,90</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Produto 7 -->
+            <div class="col-6 col-md-3 mb-4">
+                <div class="card">
+                    <img src="img/prod/Racao-Premier-Golden-Formula-Caes-Senior--7-Anos-Frango-e-Arroz.webp" class="card-img-top" alt="Golden Senior Cães">
+                    <div class="card-body">
+                        <h5 class="card-title">Golden Senior Cães</h5>
+                        <p class="card-text">Frango e Arroz - 15kg</p>
+                        <p class="price">A partir de R$ 169,90</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Produto 8 -->
+            <div class="col-6 col-md-3 mb-4">
+                <div class="card">
+                    <img src="img/prod/Racao-Premier-Golden-Formula-Mini-Bits-para-Caes-Adultos-Carne-e-Arroz.webp" class="card-img-top" alt="Golden Fórmula Mini Bits">
+                    <div class="card-body">
+                        <h5 class="card-title">Golden Fórmula Mini Bits</h5>
+                        <p class="card-text">Carne e Arroz - 1kg</p>
+                        <p class="price">A partir de R$ 25,90</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Produto 9 -->
+            <div class="col-6 col-md-3 mb-4">
+                <div class="card">
+                    <img src="img/prod/racao-premier-golden-para-gatos-adultos-castrados-frango-e-carne.webp" class="card-img-top" alt="Golden Gatos Castrados">
+                    <div class="card-body">
+                        <h5 class="card-title">Golden Gatos Castrados</h5>
+                        <p class="card-text">Frango e Carne - 10kg</p>
+                        <p class="price">A partir de R$ 99,90</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Produto 10 -->
+            <div class="col-6 col-md-3 mb-4">
+                <div class="card">
+                    <img src="img/prod/Racao-Premier-Golden-Selecao-Natural-para-Gatos-Adultos-Castrados-Abobora-e-Alecrim.webp" class="card-img-top" alt="Golden Selecao Natural Gatos">
+                    <div class="card-body">
+                        <h5 class="card-title">Golden Seleção Natural Gatos</h5>
+                        <p class="card-text">Abóbora e Alecrim - 10kg</p>
+                        <p class="price">A partir de R$ 119,90</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer -->
+<footer class="bg-light text-center text-lg-start mt-4">
+    <div class="container p-4">
+      <div class="row">
+        <!-- Sobre Nós -->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Sobre Nós</h5>
+          <p>
+            Pet Pride é o seu pet shop online de confiança, oferecendo produtos de qualidade para o cuidado com o seu pet. Cuidamos com carinho!
+          </p>
+        </div>
+  
+        <!-- Contato -->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Contato</h5>
+          <ul class="list-unstyled mb-0">
+            <li><i class="bi bi-envelope"></i> contato@petpride.com.br</li>
+            <li><i class="bi bi-telephone"></i> +55 (21) 9999-9999</li>
+            <li><i class="bi bi-geo-alt"></i> Rua dos Pets, 123 - Rio de Janeiro</li>
+          </ul>
+        </div>
+  
+        <!-- Redes Sociais -->
+        <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Siga-nos</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="text-dark me-4"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="text-dark me-4"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="text-dark me-4"><i class="bi bi-twitter"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2024 Pet Pride - Todos os direitos reservados.
+    </div>
+  </footer>
+      
+
+    <!-- Bootstrap JS Local -->
+    <script src="js/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

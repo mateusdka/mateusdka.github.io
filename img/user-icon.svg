@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45.427" height="45.427" viewBox="0 0 45.427 45.427">
+  <g id="shape" transform="translate(-209.853 -409.853)">
+    <path id="Bk_circle_bkgd" data-name="Bk circle bkgd" d="M228.846,858.876a22.714,22.714,0,1,1,22.714-22.714,22.714,22.714,0,0,1-22.714,22.714Z" transform="translate(3.721 -403.596)" fill="#67baa0"/>
+    <g id="Account_icon" data-name="Account icon" transform="translate(222.573 421.664)">
+      <path id="Path_220" data-name="Path 220" d="M242.433,848.051A6.05,6.05,0,1,1,248.485,842,6.05,6.05,0,0,1,242.433,848.051Zm0-11.144A5.093,5.093,0,1,0,247.528,842,5.093,5.093,0,0,0,242.433,836.907Z" transform="translate(-232.294 -835.95)" fill="#fff"/>
+      <path id="Path_221" data-name="Path 221" d="M230.745,865.533v-4.77a3.119,3.119,0,0,1,3.115-3.117h12.129a3.119,3.119,0,0,1,3.115,3.117v4.77h.957v-4.77a4.078,4.078,0,0,0-4.073-4.074H233.86a4.077,4.077,0,0,0-4.072,4.074v4.77Z" transform="translate(-229.788 -843.825)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

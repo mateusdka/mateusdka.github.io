@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Pet Pride - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS Local -->
+    <link href="js/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons CSS Local -->
+    <link href="js/node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <!-- Estilos Personalizados -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="verde">
+
+    <!-- Header -->
+    <header class="header-logo">
+        <div>
+            <a href="index.html"><img src="img/ppr-logo-hor.svg" alt="Pet Pride Logo" height="50"></a>
+        </div>
+        <div>
+            <a href="perfil-user.html"><i class="material-symbols-outlined active">person</i></a>
+        </div>
+    </header>
+
+    <!-- Promo Section -->
+    <section class="container mt-4">
+        <div class="promo-card">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2>Biota Intestinal<br>também é saúde.</h2>
+                    <br>
+                    <p>Conheça a linha de<br>rações úmidas probióticas.</p>
+                    <br>
+                    <button class="promo-btn">Saiba Mais</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos e Serviços Section -->
+    <section class="container">
+        <h3 class="section-title">Produtos & Serviços</h3>
+        <div class="row">
+            <div class="col-6">
+                <div id="produtos-div" class="service-card">
+                    <i class="bi bi-cart"></i>
+                    <p>Acesse a nossa Loja de Produtos</p>
+                </div>
+            </div>
+            <div id="servicos-div" class="col-6">
+                <div class="service-card">
+                    <i class="bi bi-droplet"></i>
+                    <p>Serviço de Banho & Tosa</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Selecionar as divs pelos seus IDs
+        const produtosDiv = document.getElementById('produtos-div');
+        const servicosDiv = document.getElementById('servicos-div');
+    
+        // Adicionar evento de clique para redirecionar para produtos.html
+        produtosDiv.addEventListener('click', () => {
+            window.location.href = 'produtos.html'; // Redireciona para o arquivo produtos.html
+        });
+    
+        // Adicionar evento de clique para redirecionar para servicos.html
+        servicosDiv.addEventListener('click', () => {
+            window.location.href = 'servicos.html'; // Redireciona para o arquivo servicos.html
+        });
+    </script>
+    
+
+
+    <!-- Pedidos & Agendamentos Section -->
+    <section class="container mt-4">
+        <h3 class="section-title">Pedidos & Agendamentos</h3>
+        <div class="schedule-card">
+            <div class="row align-items-center">
+                <div class="col-2">
+                    <h1>20</h1>
+                    <p>Junho<br>2024</p>
+                </div>
+                <div class="col-8">
+                    <p><strong>15:00</strong></p>
+                    <p>Anastácia Cristina</p>
+                    <p>Banho + Transporte</p>
+                </div>
+                <div class="col-2 text-end">
+                    <div class="schedule-icon">
+                        <i class="bi bi-pencil"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer -->
+<footer class="bg-light text-center text-lg-start mt-4">
+    <div class="container p-4">
+      <div class="row">
+        <!-- Sobre Nós -->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Sobre Nós</h5>
+          <p>
+            Pet Pride é o seu pet shop online de confiança, oferecendo produtos de qualidade para o cuidado com o seu pet. Cuidamos com carinho!
+          </p>
+        </div>
+  
+        <!-- Contato -->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Contato</h5>
+          <ul class="list-unstyled mb-0">
+            <li><i class="bi bi-envelope"></i> contato@petpride.com.br</li>
+            <li><i class="bi bi-telephone"></i> +55 (21) 9999-9999</li>
+            <li><i class="bi bi-geo-alt"></i> Rua dos Pets, 123 - Rio de Janeiro</li>
+          </ul>
+        </div>
+  
+        <!-- Redes Sociais -->
+        <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Siga-nos</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="text-dark me-4"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="text-dark me-4"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="text-dark me-4"><i class="bi bi-twitter"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2024 Pet Pride - Todos os direitos reservados.
+    </div>
+  </footer>
+  
+
+    <!-- Bootstrap JS Local -->
+    <script src="js/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

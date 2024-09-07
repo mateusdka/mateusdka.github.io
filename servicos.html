@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Pride - Serviços</title>
+    <!-- Bootstrap CSS Local -->
+    <link href="js/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="js/node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <!-- Estilos Personalizados -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="amarelo">
+
+    <!-- Header -->
+    <header class="header-logo">
+        <div>
+            <a href="index.html"><img src="img/ppr-logo-hor.svg" alt="Pet Pride Logo" height="50"></a>
+        </div>
+        <div>
+            <a href="perfil-user.html"><i class="material-symbols-outlined active">person</i></a>
+        </div>
+    </header>
+
+    <!-- Seção de Serviços -->
+    <!-- Lista Horizontal de Produtos -->
+    <section class="container mt-4">
+        <h3 class="section-title">Selecione o Serviço</h3>
+        <div class="scrolling-wrapper" id="servScroll">
+            <div id="banho-btn" class="serv-card">
+                <i class="material-symbols-outlined">shower</i>
+                <p>Apenas Banho</p>
+            </div>
+            <div id="tosa-btn"class="serv-card">
+                <i class="material-symbols-outlined">content_cut</i>
+                <p>Apenas Tosa</p>
+            </div>
+            <div id="banho-tosa-btn" class="serv-card">
+                <i class="material-symbols-outlined">health_and_beauty</i>
+                <p>Banho & Tosa</p>
+            </div>
+        </div>
+
+        <div class="dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <!-- Crie mais dots conforme a quantidade de itens -->
+        </div>
+    </section>
+
+    <script src="js/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript para o status de rolagem -->
+    <script>
+        const scrollingWrapper = document.getElementById('servScroll');
+        const dots = document.querySelectorAll('.dot');
+        const numCards = dots.length;
+
+        scrollingWrapper.addEventListener('scroll', () => {
+            const maxScrollLeft = scrollingWrapper.scrollWidth - scrollingWrapper.clientWidth;
+            const scrollLeft = scrollingWrapper.scrollLeft;
+            const progress = scrollLeft / maxScrollLeft;
+
+            // Atualiza as bolinhas (dots) com base na rolagem
+            const activeIndex = Math.round(progress * (numCards - 1));
+
+            dots.forEach((dot, index) => {
+                if (index === activeIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        });
+    </script>
+
+    <!-- JavaScript para a seleção do card -->
+    <script>
+        // Selecionar os três botões
+        const banhoBtn = document.getElementById('banho-btn');
+        const tosaBtn = document.getElementById('tosa-btn');
+        const banhoTosaBtn = document.getElementById('banho-tosa-btn');
+
+        // Função para ativar o botão clicado e desativar os outros dois
+        function toggleActive(selectedBtn, otherBtns) {
+            selectedBtn.classList.add('active-serv-card'); // Ativa o botão clicado
+            otherBtns.forEach(btn => btn.classList.remove('active-serv-card')); // Remove o estado dos outros
+        }
+
+        // Eventos de clique para os botões
+        banhoBtn.addEventListener('click', () => {
+            toggleActive(banhoBtn, [tosaBtn, banhoTosaBtn]);
+        });
+
+        tosaBtn.addEventListener('click', () => {
+            toggleActive(tosaBtn, [banhoBtn, banhoTosaBtn]);
+        });
+
+        banhoTosaBtn.addEventListener('click', () => {
+            toggleActive(banhoTosaBtn, [banhoBtn, tosaBtn]);
+        });
+    </script>
+
+    <!-- Sobre o Pet -->
+    <section class="container mt-4">
+        <h5>Sobre o Pet</h5>
+        <button class="serv-btn px-3 mb-2">Novo Pet</button>
+        <div class="card mb-3">
+            <div class="card-body d-flex justify-content-between align-items-center">
+                <div>
+                    <h6>Anastácia Cristina</h6>
+                    <p class="mb-0">Cão · Fêmea · 11 anos · Porte P · Dócil</p>
+                </div>
+                <i class="bi bi-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sobre o Endereço -->
+    <section class="container mt-4">
+        <h5>Sobre o Endereço</h5>
+        <button class="serv-btn px-3 mb-2">Novo Endereço</button>
+        <div class="card mb-3">
+            <div class="card-body d-flex justify-content-between align-items-center">
+                <div>
+                    <h6>Casa (Padrão)</h6>
+                    <p class="mb-0">Rua dos Alecrins, 745 - Cambuí Campinas/SP</p>
+                </div>
+                <i class="bi bi-chevron-down"></i>
+            </div>
+        </div>
+
+    <!-- Opção de Buscar o Pet -->
+        <div class="form-check form-switch mb-3">
+            <input class="form-check-input" type="checkbox" id="switchPetPickup" checked>
+            <label class="form-check-label" for="switchPetPickup">Buscar o Pet no endereço acima.</label>
+        </div>
+        <p class="small">Ao assinalar esta opção, você concorda com as <a href="#">Condições de Uso do Serviço de Transporte de Pets</a>.</p>
+
+        <!-- Valor do Pedido -->
+        <div class="card mb-3">
+            <div class="card-body d-flex justify-content-between align-items-center">
+                <div>
+                    <p class="mb-0">Valor do Pedido</p>
+                    <h5>Banho + Transporte</h5>
+                </div>
+                <h5>R$ 78,90</h5>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botões de Ação -->
+    <section class="container mt-4">
+        <div class="d-grid gap-2">
+            <button class="btn btn-success btn-lg" type="button">Seguir para Agendamento</button>
+            <button class="btn btn-outline-secondary" type="button">Limpar Pedido</button>
+        </div>
+    </section>
+
+
+<!-- Footer -->
+<footer class="bg-light text-center text-lg-start mt-4">
+    <div class="container p-4">
+      <div class="row">
+        <!-- Sobre Nós -->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Sobre Nós</h5>
+          <p>
+            Pet Pride é o seu pet shop online de confiança, oferecendo produtos de qualidade para o cuidado com o seu pet. Cuidamos com carinho!
+          </p>
+        </div>
+  
+        <!-- Contato -->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Contato</h5>
+          <ul class="list-unstyled mb-0">
+            <li><i class="bi bi-envelope"></i> contato@petpride.com.br</li>
+            <li><i class="bi bi-telephone"></i> +55 (21) 9999-9999</li>
+            <li><i class="bi bi-geo-alt"></i> Rua dos Pets, 123 - Rio de Janeiro</li>
+          </ul>
+        </div>
+  
+        <!-- Redes Sociais -->
+        <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Siga-nos</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="text-dark me-4"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="text-dark me-4"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="text-dark me-4"><i class="bi bi-twitter"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2024 Pet Pride - Todos os direitos reservados.
+    </div>
+  </footer>
+      
+
+    <!-- Bootstrap JS Local -->
+    <script src="js/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+    <!-- Bootstrap JS Local -->
+    <script src="js/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

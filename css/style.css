@@ -1,0 +1,294 @@
+/* Estilos comuns */
+body.verde {
+    background-color: #f5f5f5;
+    background-image: url(../img/shape-organic.svg);
+    background-position: 100% 0%;
+    background-repeat: no-repeat;
+}
+
+body.amarelo {
+    background-color: #f5f5f5;
+    background-image: url(../img/shape-organic-2.svg);
+    background-position: 150% 0%;
+    background-repeat: no-repeat;
+}
+
+.header-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+}
+
+.promo-card {
+    background-color: #ffffff;
+    background-image: url(../img/promo-gato.png);
+    background-position: calc(50% + 15vw) 50%;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 300px;
+}
+
+.promo-btn {
+    background-color: #58C2B5;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 30px;
+    font-size: 16px;
+}
+
+.promo-btn-outline {
+    background-color: white;
+    border: none;
+    padding: 10px 20px;
+    color: #58C2B5;
+    border-radius: 30px;
+    font-size: 16px;
+    text-decoration: none;
+    border: 1px solid;
+}
+
+.promo-btn-outline:hover {
+    background-color: #58C2B5;
+    color: white;
+}
+
+.section-title {
+    margin: 40px 0 20px 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.service-card {
+    background-color: #58C2B5;
+    padding: 30px;
+    text-align: left;
+    border-radius: 10px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+.service-card i {
+    font-size: 80px;
+    color: white;
+}
+
+.schedule-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.schedule-icon {
+    background-color: #58C2B5;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: white;
+    padding-top: 5px;
+    text-align: center;
+}
+
+/* Estilos para a lista horizontal com scroll */
+.scrolling-wrapper {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px; /* Espaçamento entre os cards */
+    padding-bottom: 10px;
+    scroll-snap-type: x mandatory; /* Mantém os cards centralizados ao rolar */
+}
+
+.scrolling-wrapper::-webkit-scrollbar {
+    display: none; /* Esconde a barra de rolagem */
+}
+
+.scrolling-wrapper i {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+/* Estilos específicos da página de produtos */
+.scrolling-wrapper .product-card {
+    flex: 0 0 250px; /* Define a largura fixa dos cards */
+    scroll-snap-align: start; /* Alinha o início de cada card */
+    background-color: #58C2B5;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.active-prod-card {
+    background-color: white !important; /* Cor do card selecionado */
+    color: #58C2B5 !important; /* Texto branco no card selecionado */
+    border-style: solid;
+    border-width: 1px;
+    border-color: #58C2B5 !important; /* Cor da borda */
+}
+
+/* Estilos específicos da página de serviços */
+.scrolling-wrapper .serv-card {
+    flex: 0 0 250px; /* Define a largura fixa dos cards */
+    scroll-snap-align: start; /* Alinha o início de cada card */
+    background-color: #E49428;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.active-serv-card {
+    background-color: white !important; /* Cor do card selecionado */
+    color: #E49428 !important; /* Texto branco no card selecionado */
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E49428 !important; /* Cor da borda */
+}
+
+/* Estilos para os dots */
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #333;
+}
+
+/* Outros da página de Produtos */
+.search-bar {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar input {
+    width: 300px;
+    border-radius: 30px;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+}
+
+.search-bar button {
+    background-color: #58C2B5;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    margin-left: 5px;
+    width: 40px;
+    height: 40px;
+}
+
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.serv-btn {
+    background-color: #E49428;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 30px;
+    font-size: 16px;
+}
+
+.serv-btn-outline {
+    background-color: white;
+    border: none;
+    padding: 10px 20px;
+    color: #E49428;
+    border-radius: 30px;
+    font-size: 16px;
+    text-decoration: none;
+    border: 1px solid;
+}
+
+.serv-btn-outline:hover {
+    background-color: #E49428;
+    color: white;
+}
+
+.controllers i, header a i {
+    background-color: #eee;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: darkgray;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.controllers i.active, header a i.active {
+    background-color: #58C2B5;
+    color: white;
+}
+
+.profile-img i {
+    background-color: #eee;
+    border-radius: 50%;
+    font-size: 60px;
+    width: 80px;
+    height: 80px;
+    color: darkgray;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.profile-img i.verde {
+    background-color: #58C2B5;
+    color: white;
+}
+
+.profile-img i.amarelo {
+    background-color: #E49428;
+    color: white;
+}
+
+.profile-img img.pet {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+/* -- Footer --*/
+
+footer {
+    background-color: #f8f9fa; /* Cor de fundo clara */
+    color: #333;
+  }
+  
+  footer h5 {
+    font-weight: bold;
+  }
+  
+  footer a {
+    color: #58C2B5; /* Cor dos ícones de redes sociais */
+  }
+  
+  footer a:hover {
+    color: #333; /* Cor ao passar o mouse */
+  }
+  

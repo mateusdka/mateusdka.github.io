@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil dos Pets - Pet Pride</title>
+    <!-- Bootstrap CSS Local -->
+    <link href="js/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="js/node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <!-- Estilos Personalizados -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="verde">
+    
+    <!-- Header -->
+    <header class="header-logo">
+        <div>
+            <a href="index.html"><img src="img/ppr-logo-hor.svg" alt="Pet Pride Logo" height="50"></a>
+        </div>
+        <div>
+            <a href="perfil-user.html"><i class="material-symbols-outlined active">person</i></a>
+        </div>
+    </header>
+
+    <!-- Seção de Título e Botão Novo Pet -->
+    <section class="container mt-4">
+        <div class="d-flex justify-content-between align-items-center">
+            <h4>Cadastro do Pet</h4>
+            <div class="controllers">
+                <a href="perfil-user.html"><i class="material-symbols-outlined">person</i></a>
+                <a href="perfil-pets.html"><i class="material-symbols-outlined active">pets</i></a>
+                <i class="material-symbols-outlined">settings</i>
+                <i class="material-symbols-outlined">notifications</i>
+            </div>
+            <button class="promo-btn">Novo Pet</button>
+        </div>
+    </section>
+
+    <!-- Lista de Pets -->
+    <section class="container mt-4">
+        <div class="card mb-3">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="img/pug.webp" class="img-fluid rounded-start" alt="Anastácia Cristina">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Anastácia Cristina</h5>
+                        <p class="card-text">Cão • Fêmea • Raça Pug • Porte P • Dócil • 11 anos • Aniversário 12/07</p>
+                        <a href="#" class="promo-btn-outline"><i class="bi bi-pencil"></i> Editar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="img/gato-preto.webp" class="img-fluid rounded-start" alt="Shakira Isabel">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Shakira Isabel</h5>
+                        <p class="card-text">Gato • Fêmea • Raça SRD • Porte P • Dócil • 10 anos • Aniversário 15/09</p>
+                        <a href="cad-pets.html" class="promo-btn-outline"><i class="bi bi-pencil"></i> Editar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center text-lg-start mt-4">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Sobre Nós</h5>
+                    <p>Pet Pride é o seu pet shop online de confiança, oferecendo produtos de qualidade para o cuidado com o seu pet. Cuidamos com carinho!</p>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Contato</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><i class="bi bi-envelope"></i> contato@petpride.com.br</li>
+                        <li><i class="bi bi-telephone"></i> +55 (21) 9999-9999</li>
+                        <li><i class="bi bi-geo-alt"></i> Rua dos Pets, 123 - Rio de Janeiro</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Siga-nos</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#" class="text-dark me-4"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="text-dark me-4"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="text-dark me-4"><i class="bi bi-twitter"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2024 Pet Pride - Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Local -->
+    <script src="js/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

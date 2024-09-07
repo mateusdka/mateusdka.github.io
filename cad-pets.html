@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Cadastro do Pet - Pet Pride</title>
+    <!-- Bootstrap CSS Local -->
+    <link href="js/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="js/node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <!-- Estilos Personalizados -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="amarelo">
+    <!-- Header -->
+    <header class="header-logo">
+        <div>
+            <a href="index.html"><img src="img/ppr-logo-hor.svg" alt="Pet Pride Logo" height="50"></a>
+        </div>
+        <div>
+            <a href="perfil-user.html"><i class="material-symbols-outlined active">person</i></a>
+        </div>
+    </header>
+
+    <!-- Seção de Edição de Cadastro do Pet -->
+    <section class="container mt-4">
+        <section class="container mt-4">
+            <div class="d-flex align-items-center">
+                <div class="profile-img">
+                    <img src="img/gato-preto.webp" class="rounded-circle pet" alt="Imagem do Pet" height="100" width="100">
+                </div>
+                <div class="p-3">
+                    <h3>Shakira Izabel</h3>
+                    <p>Editando o Cadastro do Pet</p>
+                </div>
+            </div>
+        </section>
+
+        <form class="mt-4" action="perfil-pets.html">
+            <div class="mb-3">
+                <label for="petName" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="petName" placeholder="Shakira Izabel">
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="petGender" class="form-label">Sexo</label>
+                    <select class="form-select" id="petGender">
+                        <option selected>Fêmea</option>
+                        <option>Macho</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="petBirthday" class="form-label">Nascimento</label>
+                    <input type="date" class="form-control" id="petBirthday">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="petRace" class="form-label">Raça</label>
+                    <input type="text" class="form-control" id="petRace" placeholder="SRD">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="petSize" class="form-label">Porte</label>
+                    <select class="form-select" id="petSize">
+                        <option selected>Pequeno</option>
+                        <option>Médio</option>
+                        <option>Grande</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="petTemperament" class="form-label">Temperamento</label>
+                <select class="form-select" id="petTemperament">
+                    <option selected>Dócil</option>
+                    <option>Agressivo</option>
+                    <option>Brincalhão</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="petObservations" class="form-label">Observações</label>
+                <textarea class="form-control" id="petObservations" rows="3" placeholder="Tem a Síndrome da Dor Orofacial Felina (SDOF) - não alimentar com ração ou petiscos secos, apenas pastosos."></textarea>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <button type="button" class="serv-btn-outline">Cancelar</button>
+                <button type="submit" class="serv-btn">Salvar</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center text-lg-start mt-4">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Sobre Nós</h5>
+                    <p>Pet Pride é o seu pet shop online de confiança, oferecendo produtos de qualidade para o cuidado com o seu pet. Cuidamos com carinho!</p>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Contato</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><i class="bi bi-envelope"></i> contato@petpride.com.br</li>
+                        <li><i class="bi bi-telephone"></i> +55 (21) 9999-9999</li>
+                        <li><i class="bi bi-geo-alt"></i> Rua dos Pets, 123 - Rio de Janeiro</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Siga-nos</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#" class="text-dark me-4"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="text-dark me-4"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="text-dark me-4"><i class="bi bi-twitter"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2024 Pet Pride - Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Local -->
+    <script src="js/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
