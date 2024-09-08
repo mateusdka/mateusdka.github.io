@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pet Pride - Produtos</title>
+    <title>Produtos - Pet Pride</title>
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <!-- Bootstrap CSS Local -->
     <link href="js/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons CSS Local -->
@@ -16,18 +18,41 @@
 <body class="verde">
 
     <!-- Header -->
-    <header class="header-logo">
+    <header class="header-logo d-flex justify-content-between align-items-center p-3">
         <div>
             <a href="index.html"><img src="img/ppr-logo-hor.svg" alt="Pet Pride Logo" height="50"></a>
         </div>
-        <div>
-            <a href="perfil-user.html"><i class="material-symbols-outlined active">person</i></a>
-        </div>
+        
+        <nav>
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="produtos.html">Loja</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="servicos.html">Serviços</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="cadastrosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Cadastros
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="cadastrosDropdown">
+                        <li><a class="dropdown-item" href="perfil-user.html">Tutor</a></li>
+                        <li><a class="dropdown-item" href="perfil-pets.html">Pets</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"></li>
+                    <a class="nav-link" href="contato.html">Fale Conosco</a>
+                </li>
+            </ul>
+        </nav>
     </header>
 
     <!-- Lista Horizontal de Produtos -->
     <section class="container mt-4">
-        <h3 class="section-title">Filtre os Produtos por Categoria</h3>
+        <h3 class="section-title title-detail-green">Selecione a Categoria</h3>
         <div class="scrolling-wrapper" id="productScroll">
             <div id="secas-btn" class="product-card">
                 <i class="material-symbols-outlined">grain</i>
@@ -51,7 +76,7 @@
             </div>
         </div>
 
-        <div class="dots">
+        <div class="dots"> <!-- Item para trazer maior sensação de navegabilidade -->
             <div class="dot"></div>
             <div class="dot"></div>
             <div class="dot"></div>
@@ -121,7 +146,6 @@
             toggleActive(medicamentosBtn, [secasBtn, umidasBtn, petiscosBtn, cosmeticosBtn]);
         });
     </script>
-    
 
     <!-- Barra de busca -->
     <section class="search-bar">
@@ -140,6 +164,7 @@
                         <h5 class="card-title">Nutrive Select Adultos Pequeno Porte</h5>
                         <p class="card-text">Frango e Arroz - 15kg</p>
                         <p class="price">A partir de R$ 199,90</p>
+                        <button class="default-btn orange-btn">Ver Produto</button>
                     </div>
                 </div>
             </div>
@@ -152,6 +177,7 @@
                         <h5 class="card-title">Fórmula Natural Gatos Sênior</h5>
                         <p class="card-text">Frango - 1,5kg</p>
                         <p class="price">A partir de R$ 114,90</p>
+                        <button class="default-btn orange-btn">Ver Produto</button>
                     </div>
                 </div>
             </div>
@@ -164,6 +190,7 @@
                         <h5 class="card-title">Gran Plus Choice Gatos Filhotes</h5>
                         <p class="card-text">Frango e Carne - 10kg</p>
                         <p class="price">A partir de R$ 124,90</p>
+                        <button class="default-btn orange-btn">Ver Produto</button>
                     </div>
                 </div>
             </div>
@@ -176,6 +203,7 @@
                         <h5 class="card-title">Magnus Premium Adultos</h5>
                         <p class="card-text">Carne e Frango - 15kg</p>
                         <p class="price">A partir de R$ 89,90</p>
+                        <button class="default-btn orange-btn">Ver Produto</button>
                     </div>
                 </div>
             </div>
@@ -188,6 +216,7 @@
                         <h5 class="card-title">Magnus Premium Filhotes</h5>
                         <p class="card-text">Carne - 10kg</p>
                         <p class="price">A partir de R$ 99,90</p>
+                        <button class="default-btn orange-btn">Ver Produto</button>
                     </div>
                 </div>
             </div>
@@ -200,6 +229,7 @@
                         <h5 class="card-title">Origens Gatos Castrados</h5>
                         <p class="card-text">Carne - 10kg</p>
                         <p class="price">A partir de R$ 109,90</p>
+                        <button class="default-btn orange-btn">Ver Produto</button>
                     </div>
                 </div>
             </div>
@@ -212,6 +242,7 @@
                         <h5 class="card-title">Golden Senior Cães</h5>
                         <p class="card-text">Frango e Arroz - 15kg</p>
                         <p class="price">A partir de R$ 169,90</p>
+                        <button class="default-btn orange-btn">Ver Produto</button>
                     </div>
                 </div>
             </div>
@@ -224,6 +255,7 @@
                         <h5 class="card-title">Golden Fórmula Mini Bits</h5>
                         <p class="card-text">Carne e Arroz - 1kg</p>
                         <p class="price">A partir de R$ 25,90</p>
+                        <button class="default-btn orange-btn">Ver Produto</button>
                     </div>
                 </div>
             </div>
@@ -236,6 +268,7 @@
                         <h5 class="card-title">Golden Gatos Castrados</h5>
                         <p class="card-text">Frango e Carne - 10kg</p>
                         <p class="price">A partir de R$ 99,90</p>
+                        <button class="default-btn orange-btn">Ver Produto</button>
                     </div>
                 </div>
             </div>
@@ -248,6 +281,7 @@
                         <h5 class="card-title">Golden Seleção Natural Gatos</h5>
                         <p class="card-text">Abóbora e Alecrim - 10kg</p>
                         <p class="price">A partir de R$ 119,90</p>
+                        <button class="default-btn orange-btn">Ver Produto</button>
                     </div>
                 </div>
             </div>
@@ -260,7 +294,7 @@
       <div class="row">
         <!-- Sobre Nós -->
         <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Sobre Nós</h5>
+          <h5 class="text-uppercase title-detail-green">Sobre Nós</h5>
           <p>
             Pet Pride é o seu pet shop online de confiança, oferecendo produtos de qualidade para o cuidado com o seu pet. Cuidamos com carinho!
           </p>
@@ -268,7 +302,7 @@
   
         <!-- Contato -->
         <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Contato</h5>
+          <h5 class="text-uppercase title-detail-green">Contato</h5>
           <ul class="list-unstyled mb-0">
             <li><i class="bi bi-envelope"></i> contato@petpride.com.br</li>
             <li><i class="bi bi-telephone"></i> +55 (21) 9999-9999</li>
@@ -278,7 +312,7 @@
   
         <!-- Redes Sociais -->
         <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Siga-nos</h5>
+          <h5 class="text-uppercase title-detail-green">Siga-nos</h5>
           <ul class="list-unstyled">
             <li>
               <a href="#" class="text-dark me-4"><i class="bi bi-facebook"></i></a>

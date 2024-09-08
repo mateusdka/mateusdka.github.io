@@ -2,8 +2,10 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Pet Pride - Home</title>
+    <title>Bem-vindo a Pet Pride</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <!-- Bootstrap CSS Local -->
     <link href="js/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons CSS Local -->
@@ -16,16 +18,40 @@
 <body class="verde">
 
     <!-- Header -->
-    <header class="header-logo">
+    <header class="header-logo d-flex justify-content-between align-items-center p-3">
         <div>
             <a href="index.html"><img src="img/ppr-logo-hor.svg" alt="Pet Pride Logo" height="50"></a>
         </div>
-        <div>
-            <a href="perfil-user.html"><i class="material-symbols-outlined active">person</i></a>
-        </div>
+        
+        <nav>
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="produtos.html">Loja</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="servicos.html">Serviços</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="cadastrosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Cadastros
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="cadastrosDropdown">
+                        <li><a class="dropdown-item" href="perfil-user.html">Tutor</a></li>
+                        <li><a class="dropdown-item" href="perfil-pets.html">Pets</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"></li>
+                    <a class="nav-link" href="contato.html">Fale Conosco</a>
+                </li>
+            </ul>
+        </nav>
     </header>
+    
 
-    <!-- Promo Section -->
+    <!-- Seção Promo -->
     <section class="container mt-4">
         <div class="promo-card">
             <div class="row align-items-center">
@@ -34,15 +60,15 @@
                     <br>
                     <p>Conheça a linha de<br>rações úmidas probióticas.</p>
                     <br>
-                    <button class="promo-btn">Saiba Mais</button>
+                    <button class="default-btn green-btn">Saiba Mais</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Produtos e Serviços Section -->
+    <!-- Seção Produtos e Serviços -->
     <section class="container">
-        <h3 class="section-title">Produtos & Serviços</h3>
+        <h3 class="section-title title-detail-green">Produtos & Serviços</h3>
         <div class="row">
             <div class="col-6">
                 <div id="produtos-div" class="service-card">
@@ -60,7 +86,9 @@
     </section>
 
     <script>
-        // Selecionar as divs pelos seus IDs
+        // Este script cria a "função" de link nos cards.
+        
+        // Selecionar as divs pelos IDs
         const produtosDiv = document.getElementById('produtos-div');
         const servicosDiv = document.getElementById('servicos-div');
     
@@ -74,12 +102,10 @@
             window.location.href = 'servicos.html'; // Redireciona para o arquivo servicos.html
         });
     </script>
-    
 
-
-    <!-- Pedidos & Agendamentos Section -->
+    <!-- Seção de Pedidos & Agendamentos -->
     <section class="container mt-4">
-        <h3 class="section-title">Pedidos & Agendamentos</h3>
+        <h3 class="section-title title-detail-green">Pedidos & Agendamentos</h3>
         <div class="schedule-card">
             <div class="row align-items-center">
                 <div class="col-2">
@@ -106,7 +132,7 @@
       <div class="row">
         <!-- Sobre Nós -->
         <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Sobre Nós</h5>
+          <h5 class="text-uppercase title-detail-green">Sobre Nós</h5>
           <p>
             Pet Pride é o seu pet shop online de confiança, oferecendo produtos de qualidade para o cuidado com o seu pet. Cuidamos com carinho!
           </p>
@@ -114,7 +140,7 @@
   
         <!-- Contato -->
         <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Contato</h5>
+          <h5 class="text-uppercase title-detail-green">Contato</h5>
           <ul class="list-unstyled mb-0">
             <li><i class="bi bi-envelope"></i> contato@petpride.com.br</li>
             <li><i class="bi bi-telephone"></i> +55 (21) 9999-9999</li>
@@ -124,7 +150,7 @@
   
         <!-- Redes Sociais -->
         <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Siga-nos</h5>
+          <h5 class="text-uppercase title-detail-green">Siga-nos</h5>
           <ul class="list-unstyled">
             <li>
               <a href="#" class="text-dark me-4"><i class="bi bi-facebook"></i></a>
